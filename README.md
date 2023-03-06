@@ -3,8 +3,8 @@ This is a snap with multiple features. In this snap we have multiple componenets
 * Have Recurring Payments every month 
 * Show the graphs to analyse the transaction details made on any transaction
 
-*[Demo Video](https://drive.google.com/file/d/1TA1S4Y14TU3Hy5hLv-dz90V_BxCmimmO/view) 
-*[Presentation](https://www.canva.com/design/DAFZ02fN2_s/GIexwDK34xOtOlJdRnU7kw/view#1)
+* [Demo Video](https://drive.google.com/file/d/1TA1S4Y14TU3Hy5hLv-dz90V_BxCmimmO/view)
+* [Presentation](https://www.canva.com/design/DAFZ02fN2_s/GIexwDK34xOtOlJdRnU7kw/view#1)
 
 ## Prerequisites
 
