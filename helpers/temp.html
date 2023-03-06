@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+</head>
+<title>Hello, Snaps!</title>
+<link rel="icon" type="image/svg" href="./images/icon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Crete+Round&family=DM+Serif+Display&family=Noto+Serif&family=Oswald:wght@300&family=Roboto+Slab&family=Sofia&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bdy">
+    <canvas id="Matrix">
+    </canvas>
+    <nav>
+        <center>
+            <div id="logo-container"></div>
+        </center>
+        <button class="connect_nav connect">Connect</button>
+        <button class="sendHello">Send Hello</button>
+    </nav>
+    <h1><span class="wlcm">Welcome</span> to Multi Snap!</h1>
+
+    <div class="hdng1">Our Scheduled Transaction Feature</div>
+    <div class="hdng2">Our CSV Uploading Feature for Payment</div>
+
+    <form id="storeAddress" class="form_cntnr">
+        <fieldset class="frmx">
+            <div class="r1">
+                <input type="file" id="fileUpload" class="fileUpload" />
+                <input type="button" id="upload" value="Upload" onclick="Upload()" />
+            </div>
+            <div id="dvCSV"></div>
+            <div class="r2">
+                <button onclick="makeJson()" class="pay">PayNow</button>
+            </div>
+            <hr>
+            <div class="r1">
+                <input type="file" id="recurringPayment" class="fileUpload" />
+                <input type="button" id="upload" value="Upload" onclick="recurringUpload()" />
+            </div>
+            <div id="dvCSV-2"></div>
+        </fieldset>
+
+        <fieldset class="frm">
+            <label class="lbl" for="amountToStore">Amount</label>
+            <input type="text" id="amountToStore" name="amountToStore"><br>
+            <label class="lbl" for="addressToStore">Address</label>
+            <input type="text" id="addressToStore" name="addressToStore"><br>
+            <label class="lbld" for="dateToStore">Date</label>
+            <input type="datetime-local" id="dateToStore" name="dateToStore"><br>
+            <input type="submit" id="storeAddress" class="save_btn" value="Save">
+            <hr>
+            <centre>
+                <button onclick="showScheduledPayment()" class="ssp1">Show Scheduled Payments</button>
+                <button onclick="clearAddresses()" class="ssp2">Clear Scheduled Payments</button>
+            </centre>
+        </fieldset>
+    </form>
+
+</body>
+
+<script src="logic.js"></script>
+<script src="./helpers/connectSnap.js"></script>
+<script src="./helpers/multiplePayments.js"></script>
+<script src="./helpers/scheduledPayment.js"></script>
+<script src="./helpers/fetchData.js"></script>
+<script src="./helpers/sendHello.js"></script>
+<script src="./helpers/recurringPayments.js"></script>
+<script>
+
+    const snapId = `local:${window.location.href}`;
+
+    const connectButton = document.querySelector('button.connect')
+    const sendButton = document.querySelector('button.sendHello')
+
+    connectButton.addEventListener('click', connect)
+    sendButton.addEventListener('click', send)
+
+</script>

@@ -1,0 +1,46 @@
+{
+  "version": "0.7.1",
+  "proposedName": "MultiSnap",
+  "description": "A snap having multi features.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Montoya/address-book-snap-tutorial.git"
+  },
+  "source": {
+    "shasum": "7TEv9uzmB+4ASjM9DeC9PU7r8FjC2Bj+CMcPZPpBX5s=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "iconPath": "images/icon.svg",
+        "packageName": "@metamask/address-book-snap",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_confirm": {},
+    "snap_manageState": {},
+    "endowment:network-access": {},
+    "endowment:transaction-insight": {},
+    "endowment:cronjob": {
+      "jobs": [
+        {
+          "expression": "* * * * *",
+          "request": {
+            "method": "checkTransaction",
+            "params": {
+              "param1": "bar"
+            }
+          }
+        },
+        {
+          "expression": "* * * * *",
+          "request": {
+            "method": "recurringTransaction"
+          }
+        }
+      ]
+    }
+  },
+  "manifestVersion": "0.1"
+}
